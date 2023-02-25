@@ -9,6 +9,6 @@ Javier Cabrera
 # Alumnos
 - Marko Rique
 - Wilfredo Guia
-- 
+- Jose Valencia
 - 
 - 
