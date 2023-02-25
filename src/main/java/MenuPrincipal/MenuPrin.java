@@ -4,6 +4,11 @@
  */
 package MenuPrincipal;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import javax.swing.JFileChooser;
+
 /**
  *
  * @author noesa
@@ -71,6 +76,7 @@ public class MenuPrin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void llenarInvenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_llenarInvenActionPerformed
+
         AgregarInven inven = new AgregarInven();
         inven.setVisible(true);
         this.setVisible(false);
