@@ -8,7 +8,7 @@ Javier Cabrera
 - Grupo numero 8
 # Alumnos
 - Marko Rique
-- 
+- Wilfredo Guia
 - 
 - 
 - 
