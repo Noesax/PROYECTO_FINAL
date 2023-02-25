@@ -10,5 +10,5 @@ package revisar_stock;
  * @author WGM1200
  */
 public class Prueba {
-    
+    //Pruebando si esto funciona
 }
