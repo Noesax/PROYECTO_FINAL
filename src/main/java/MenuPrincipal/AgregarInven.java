@@ -75,6 +75,7 @@ public class AgregarInven extends javax.swing.JFrame {
         tprecio = new javax.swing.JTextField();
         tcantidad = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
@@ -89,7 +90,7 @@ public class AgregarInven extends javax.swing.JFrame {
                 regresarActionPerformed(evt);
             }
         });
-        getContentPane().add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 120, -1));
+        getContentPane().add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 120, 40));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -134,7 +135,16 @@ public class AgregarInven extends javax.swing.JFrame {
         getContentPane().add(tcantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 214, 237, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\logo_minimarket-1.png")); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, 390, 430));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 520, 430));
+
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\nuevo.png")); // NOI18N
+        jButton1.setText("Nuevo");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 120, 40));
 
         jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\ca.jpg")); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 430));
@@ -169,6 +179,14 @@ public class AgregarInven extends javax.swing.JFrame {
             System.out.println("Error de archivo");
         }
     }//GEN-LAST:event_aniadirActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        tcodigo.setText(" ");
+        tnombree.setText(" ");
+        tprecio.setText(" ");
+        Ttipo.setSelectedItem(" ");
+        tcantidad.setText(" ");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,6 +226,7 @@ public class AgregarInven extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> Ttipo;
     private javax.swing.JButton aniadir;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

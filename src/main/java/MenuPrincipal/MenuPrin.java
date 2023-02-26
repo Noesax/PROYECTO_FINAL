@@ -34,15 +34,19 @@ public class MenuPrin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        llenarInven = new javax.swing.JToggleButton();
         jLabel1 = new javax.swing.JLabel();
+        llenarInven = new javax.swing.JToggleButton();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jbt = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\elegantes.png")); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 320, 580));
 
         llenarInven.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\actualizar.png")); // NOI18N
         llenarInven.setText("Agregar Producto");
@@ -51,10 +55,7 @@ public class MenuPrin extends javax.swing.JFrame {
                 llenarInvenActionPerformed(evt);
             }
         });
-        getContentPane().add(llenarInven, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, -1, 50));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\elegantes.png")); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 320, 580));
+        getContentPane().add(llenarInven, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, -1, 60));
 
         jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\salir.png")); // NOI18N
         jButton1.setText("Salir ");
@@ -63,12 +64,12 @@ public class MenuPrin extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 160, 60));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Minimarket");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, 121, 52));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, 121, 52));
 
         jbt.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\reporte.png")); // NOI18N
         jbt.setText("Revisar Stock");
@@ -78,6 +79,9 @@ public class MenuPrin extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jbt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 160, 60));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\logo_minimarket-1.png")); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 590));
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\ca.jpg")); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 600));
@@ -144,6 +148,7 @@ public class MenuPrin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JButton jbt;
     private javax.swing.JToggleButton llenarInven;
     // End of variables declaration//GEN-END:variables
