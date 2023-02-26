@@ -72,6 +72,7 @@ public class AgregarInven extends javax.swing.JFrame {
         tprecio = new javax.swing.JTextField();
         tcantidad = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
 
@@ -88,19 +89,23 @@ public class AgregarInven extends javax.swing.JFrame {
         getContentPane().add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 111, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
         jLabel1.setText("Añadir nuevos productos");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, 54));
 
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Nombre del producto:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 100, 130, 31));
         getContentPane().add(tnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 137, 445, -1));
 
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Tipo de producto: ");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 137, 136, 34));
 
         Ttipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione el tipo", "Bebida alcoholica", "Bebida no alcoholica", "Primera necesidad", "Frutas", "Verduras", "Cereales" }));
         getContentPane().add(Ttipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 143, 237, -1));
 
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Cantidad ingresada");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 208, 130, 35));
 
@@ -114,10 +119,12 @@ public class AgregarInven extends javax.swing.JFrame {
         getContentPane().add(aniadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 110, -1));
         getContentPane().add(tnombree, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 100, 237, -1));
 
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Codigo del producto:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 69, -1, -1));
         getContentPane().add(tcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 66, 237, -1));
 
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Precio unitario:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 180, -1, -1));
         getContentPane().add(tprecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 177, 237, -1));
@@ -126,6 +133,9 @@ public class AgregarInven extends javax.swing.JFrame {
         jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\lupa.png")); // NOI18N
         jButton1.setText("Buscar");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 110, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\ca.jpg")); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 400));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -203,6 +213,7 @@ public class AgregarInven extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JToggleButton regresar;
     private javax.swing.JTextField tcantidad;
