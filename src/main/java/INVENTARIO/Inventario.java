@@ -8,7 +8,7 @@ public class Inventario {
      private String nombre;
      private String tipo;
      private Date fecha;
-     private int codigo;
+     private String codigo;
      private double precioUnidad;
      private int cantidad;
 
@@ -16,7 +16,7 @@ public class Inventario {
         fecha = new Date();
     }
 
-    public Inventario(String nombre, String tipo, Date fecha, int codigo, double precioUnidad, int cantidad) {
+    public Inventario(String nombre, String tipo, Date fecha, String codigo, double precioUnidad, int cantidad) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.fecha = fecha;
@@ -27,9 +27,9 @@ public class Inventario {
     
     public String print(){
     
-        String salida = "Codigo: "+getCodigo()+"Nombre: "+getNombre()
-                +"\nTipo: "+getTipo()+"Precio unitario: "
-                +getPrecioUnidad()+"Cantidad: "+getCantidad()
+        String salida = "Codigo: "+getCodigo()+"\nNombre: "+getNombre()
+                +"\nTipo: "+getTipo()+"\nPrecio unitario: "
+                +getPrecioUnidad()+"\nCantidad: "+getCantidad()
                 +"\nFecha de llegada: "+fecha;
         return salida;
     }
@@ -54,11 +54,11 @@ public class Inventario {
         this.tipo = tipo;
     }
 
-    public int getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
