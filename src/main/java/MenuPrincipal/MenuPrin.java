@@ -101,7 +101,7 @@ public class MenuPrin extends javax.swing.JFrame {
 
     private void jbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtActionPerformed
         // TODO add your handling code here:
-        
+        this.setVisible(false);
         new RevisarStock().setVisible(true);
         
         

@@ -55,6 +55,7 @@ public class RevisarStock extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jMenu1.setText("Nuevo");
+        jMenu1.setToolTipText("");
         jMenuBar1.add(jMenu1);
 
         jMenu3.setText("Actualizar");
