@@ -4,7 +4,10 @@
  */
 package MenuPrincipal;
 import INVENTARIO.Inventario;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -71,7 +74,7 @@ public class AgregarInven extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         tprecio = new javax.swing.JTextField();
         tcantidad = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
         jTextField1.setText("jTextField1");
@@ -79,17 +82,17 @@ public class AgregarInven extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        regresar.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\salir.png")); // NOI18N
+        regresar.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\retornar.png")); // NOI18N
         regresar.setText("Regresar");
         regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regresarActionPerformed(evt);
             }
         });
-        getContentPane().add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 111, -1));
+        getContentPane().add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 120, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Añadir nuevos productos");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, 54));
 
@@ -116,7 +119,7 @@ public class AgregarInven extends javax.swing.JFrame {
                 aniadirActionPerformed(evt);
             }
         });
-        getContentPane().add(aniadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 110, -1));
+        getContentPane().add(aniadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 120, -1));
         getContentPane().add(tnombree, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 100, 237, -1));
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
@@ -130,12 +133,11 @@ public class AgregarInven extends javax.swing.JFrame {
         getContentPane().add(tprecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 177, 237, -1));
         getContentPane().add(tcantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 214, 237, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\lupa.png")); // NOI18N
-        jButton1.setText("Buscar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 110, -1));
+        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\logo_minimarket-1.png")); // NOI18N
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, 390, 430));
 
         jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\ca.jpg")); // NOI18N
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 400));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -206,7 +208,6 @@ public class AgregarInven extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> Ttipo;
     private javax.swing.JButton aniadir;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -214,6 +215,7 @@ public class AgregarInven extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JToggleButton regresar;
     private javax.swing.JTextField tcantidad;

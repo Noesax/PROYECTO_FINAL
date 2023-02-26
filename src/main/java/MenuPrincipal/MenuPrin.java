@@ -63,7 +63,7 @@ public class MenuPrin extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 255));
@@ -77,7 +77,7 @@ public class MenuPrin extends javax.swing.JFrame {
                 jbtActionPerformed(evt);
             }
         });
-        getContentPane().add(jbt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 160, 60));
+        getContentPane().add(jbt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 160, 60));
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\ca.jpg")); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 600));
