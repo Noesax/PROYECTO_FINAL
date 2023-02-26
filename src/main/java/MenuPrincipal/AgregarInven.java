@@ -71,19 +71,21 @@ public class AgregarInven extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         tprecio = new javax.swing.JTextField();
         tcantidad = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        regresar.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\salir.png")); // NOI18N
         regresar.setText("Regresar");
         regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 regresarActionPerformed(evt);
             }
         });
-        getContentPane().add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 111, -1));
+        getContentPane().add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 111, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Añadir nuevos productos");
@@ -102,13 +104,14 @@ public class AgregarInven extends javax.swing.JFrame {
         jLabel5.setText("Cantidad ingresada");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 208, 130, 35));
 
+        aniadir.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\add.png")); // NOI18N
         aniadir.setText("Añadir");
         aniadir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aniadirActionPerformed(evt);
             }
         });
-        getContentPane().add(aniadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 110, -1));
+        getContentPane().add(aniadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 110, -1));
         getContentPane().add(tnombree, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 100, 237, -1));
 
         jLabel3.setText("Codigo del producto:");
@@ -119,6 +122,10 @@ public class AgregarInven extends javax.swing.JFrame {
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 180, -1, -1));
         getContentPane().add(tprecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 177, 237, -1));
         getContentPane().add(tcantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 214, 237, -1));
+
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\lupa.png")); // NOI18N
+        jButton1.setText("Buscar");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 110, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -189,6 +196,7 @@ public class AgregarInven extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> Ttipo;
     private javax.swing.JButton aniadir;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

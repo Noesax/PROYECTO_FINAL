@@ -35,54 +35,52 @@ public class MenuPrin extends javax.swing.JFrame {
     private void initComponents() {
 
         llenarInven = new javax.swing.JToggleButton();
+        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jbt = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        llenarInven.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\actualizar.png")); // NOI18N
         llenarInven.setText("Agregar Producto");
         llenarInven.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 llenarInvenActionPerformed(evt);
             }
         });
+        getContentPane().add(llenarInven, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, -1, 50));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\elegantes.png")); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 320, 580));
+
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\salir.png")); // NOI18N
         jButton1.setText("Salir ");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel2.setText("Minimarket");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, 121, 52));
+
+        jbt.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\reporte.png")); // NOI18N
         jbt.setText("Revisar Stock");
         jbt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtActionPerformed(evt);
             }
         });
+        getContentPane().add(jbt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 160, 60));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(llenarInven)
-                    .addComponent(jbt, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addContainerGap(534, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addComponent(llenarInven, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(jbt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(312, 312, 312)
-                .addComponent(jButton1))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\noesa\\OneDrive\\Escritorio\\ESTE SI PROYECTO\\PROYECTO\\src\\main\\java\\imagenes\\ca.jpg")); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -143,6 +141,9 @@ public class MenuPrin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton jbt;
     private javax.swing.JToggleButton llenarInven;
     // End of variables declaration//GEN-END:variables
