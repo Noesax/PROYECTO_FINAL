@@ -4,6 +4,10 @@
  */
 package MenuPrincipal;
 import INVENTARIO.Inventario;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  *
@@ -16,6 +20,30 @@ public class AgregarInven extends javax.swing.JFrame {
      */
     public AgregarInven() {
         initComponents();
+         File archivo;
+        FileWriter escribir;
+        PrintWriter linea;
+        archivo = new File("Inventario.txt");
+        if (!archivo.exists()) {
+            try {
+                archivo.createNewFile();
+                escribir = new FileWriter(archivo, true);
+                linea = new PrintWriter(escribir);
+                linea.close();
+                escribir.close();
+            } catch (IOException e) {
+                System.out.println("Error de archivo");
+            }
+        } else {
+            try {
+                escribir = new FileWriter(archivo, true);
+                linea = new PrintWriter(escribir);
+                linea.close();
+                escribir.close();
+            } catch (IOException e) {
+                System.out.println("Error de archivo");
+            }
+        }       
         this.setLocationRelativeTo(null);
     }
     
@@ -37,8 +65,6 @@ public class AgregarInven extends javax.swing.JFrame {
         Ttipo = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         aniadir = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tsalida = new javax.swing.JTextArea();
         tnombree = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         tcodigo = new javax.swing.JTextField();
@@ -49,6 +75,7 @@ public class AgregarInven extends javax.swing.JFrame {
         jTextField1.setText("jTextField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         regresar.setText("Regresar");
         regresar.addActionListener(new java.awt.event.ActionListener() {
@@ -56,17 +83,24 @@ public class AgregarInven extends javax.swing.JFrame {
                 regresarActionPerformed(evt);
             }
         });
+        getContentPane().add(regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 111, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Añadir nuevos productos");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, 54));
 
         jLabel2.setText("Nombre del producto:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 100, 130, 31));
+        getContentPane().add(tnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(397, 137, 445, -1));
 
         jLabel4.setText("Tipo de producto: ");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 137, 136, 34));
 
         Ttipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione el tipo", "Bebida alcoholica", "Bebida no alcoholica", "Primera necesidad", "Frutas", "Verduras", "Cereales" }));
+        getContentPane().add(Ttipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 143, 237, -1));
 
         jLabel5.setText("Cantidad ingresada");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 208, 130, 35));
 
         aniadir.setText("Añadir");
         aniadir.addActionListener(new java.awt.event.ActionListener() {
@@ -74,98 +108,17 @@ public class AgregarInven extends javax.swing.JFrame {
                 aniadirActionPerformed(evt);
             }
         });
-
-        tsalida.setColumns(20);
-        tsalida.setRows(5);
-        jScrollPane1.setViewportView(tsalida);
+        getContentPane().add(aniadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 110, -1));
+        getContentPane().add(tnombree, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 100, 237, -1));
 
         jLabel3.setText("Codigo del producto:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 69, -1, -1));
+        getContentPane().add(tcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 66, 237, -1));
 
         jLabel6.setText("Precio unitario:");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(255, 255, 255))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(148, 148, 148)
-                                        .addComponent(tcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(tnombree, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel3)
-                                    .addComponent(Ttipo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(aniadir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel6))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(tprecio)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(tcantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 0, Short.MAX_VALUE)))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addComponent(tnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(73, 73, 73)
-                                .addComponent(jLabel1)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(tcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tnombree, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tnombre)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(Ttipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tprecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tcantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addComponent(aniadir)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(regresar)
-                .addGap(14, 14, 14))
-        );
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 180, -1, -1));
+        getContentPane().add(tprecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 177, 237, -1));
+        getContentPane().add(tcantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 214, 237, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -178,12 +131,24 @@ public class AgregarInven extends javax.swing.JFrame {
 
     private void aniadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aniadirActionPerformed
         Inventario llenar = new Inventario();
-        llenar.setCodigo(tcodigo.getText());
-        llenar.setNombre(tnombree.getText());
-        llenar.setPrecioUnidad(Double.parseDouble(tprecio.getText()));
-        llenar.setTipo(Ttipo.getSelectedItem().toString());
-        llenar.setCantidad(Integer.parseInt(tcantidad.getText()));
-        tsalida.setText(llenar.print());
+        File archivo;
+        FileWriter escribir;
+        PrintWriter linea;
+        archivo = new File("Inventario.txt");
+        try {
+            archivo.createNewFile();
+            escribir = new FileWriter(archivo, true);
+            linea = new PrintWriter(escribir);
+            linea.println(tcodigo.getText());
+            linea.println(tnombree.getText()+" ");
+            linea.println(Double.parseDouble(tprecio.getText()+" "));
+            linea.println(Ttipo.getSelectedItem().toString()+" ");
+            linea.println(tcantidad.getText()+" ");
+            linea.close();
+            escribir.close();
+        } catch (IOException e) {
+            System.out.println("Error de archivo");
+        }
     }//GEN-LAST:event_aniadirActionPerformed
 
     /**
@@ -230,7 +195,6 @@ public class AgregarInven extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JToggleButton regresar;
     private javax.swing.JTextField tcantidad;
@@ -238,6 +202,5 @@ public class AgregarInven extends javax.swing.JFrame {
     private javax.swing.JLabel tnombre;
     private javax.swing.JTextField tnombree;
     private javax.swing.JTextField tprecio;
-    private javax.swing.JTextArea tsalida;
     // End of variables declaration//GEN-END:variables
 }
