@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package MenuPrincipal;
-import INVENTARIO.Inventario;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -159,7 +158,7 @@ public class AgregarInven extends javax.swing.JFrame {
     }//GEN-LAST:event_regresarActionPerformed
 
     private void aniadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aniadirActionPerformed
-        Inventario llenar = new Inventario();
+        
         File archivo;
         FileWriter escribir;
         PrintWriter linea;
